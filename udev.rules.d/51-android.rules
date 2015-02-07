@@ -1,0 +1,3 @@
+SUBSYSTEM=="usb", ATTR{idVendor}=="[04e8]", MODE="0666"
+SUBSYSTEM=="usb",ATTR{idVendor}=="[04e8]",ATTR{idProduct}=="[6860]",SYMLINK+="android_adb"
+SUBSYSTEM=="usb",ATTR{idVendor}=="[0r38]",ATTR{idProduct}=="[6860]",SYMLINK+="android_fastboot"
