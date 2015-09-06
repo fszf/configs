@@ -1,0 +1,13 @@
+[Unit]
+Description=Run script on Suspend/Resume
+Before=sleep.target
+StopWhenUnneeded=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/sbin/udiskie-umount /dev/sdb1
+ExecStop=/usr/sbin/udiskie-mount -a 
+
+[Install]
+WantedBy=sleep.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Run script on Resume
+After=suspend.target
+
+[Service]
+Environment=DISPLAY=:0
+User=frank604
+Type=oneshot
+ExecStart=/usr/sbin/setxkbmap -option caps:swapescape
+
+[Install]
+WantedBy=suspend.target
