@@ -1,0 +1,1 @@
+ACTION=="add", KERNEL=="sd*", ATTRS{serial}=="575853314536325059585232", SYMLINK+="passport%n", RUN+="mount /media/Passport"

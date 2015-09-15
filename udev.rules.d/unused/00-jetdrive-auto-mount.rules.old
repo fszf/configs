@@ -1,0 +1,1 @@
+ACTION=="add", KERNEL=="sd*", ATTRS{serial}=="00000000AP05", SYMLINK+="mydrive%n", RUN+="mount /media/Jetdrive"
