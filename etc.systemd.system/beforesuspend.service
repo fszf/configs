@@ -6,8 +6,7 @@ StopWhenUnneeded=no
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/sbin/udiskie-umount /dev/sdb1
-ExecStop=/usr/sbin/udiskie-mount -a 
+ExecStart=/home/frank604/src/scripts/presuspend
 
 [Install]
 WantedBy=sleep.target
