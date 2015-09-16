@@ -1,0 +1,12 @@
+[Unit]
+Description=Run script on reboot
+Before=reboot.target
+StopWhenUnneeded=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/home/frank604/src/scripts/presuspend
+
+[Install]
+WantedBy=restart.target
