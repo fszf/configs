@@ -1,0 +1,19 @@
+#!/bin/bash
+
+case $1 in
+    pre)
+        mpc stop
+        pkill mpv
+        #pkill ncmpcpp
+        #udiskie-umount -a
+        for mod in $(</etc/suspend-modules.conf); do
+            rmmod $mod
+        done
+    ;;
+    post)
+        systemctl reset-failed
+        for mod in $(</etc/suspend-modules.conf); do
+            modprobe $mod
+	done
+    ;;
+esac
