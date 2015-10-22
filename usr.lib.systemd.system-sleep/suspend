@@ -4,8 +4,7 @@ case $1 in
     pre)
         mpc stop
         pkill mpv
-        #pkill ncmpcpp
-        #udiskie-umount -a
+        pkill ranger
         for mod in $(</etc/suspend-modules.conf); do
             rmmod $mod
         done
